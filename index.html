@@ -2,23 +2,58 @@
 <html>
 <head>
 <title>Page Title</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link rel="stylesheet" href="assets/css/estilo.css">
+<link rel="stylesheet" href="assets/css/estilo.css?v=1.0.0">
+
+<script>
+    if(location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+        document.addEventListener('DOMContentLoaded', function() {
+            var timestamp = new Date().getTime();
+            var links = document.getElementsByTagName('link');
+            for(var i = 0; i < links.length; i++) {
+                if(links[i].rel === "stylesheet") {
+                    links[i].href = links[i].href + '&t=' + timestamp;
+                }
+            }
+        });
+    }
+</script>
 </head>
 <body>
 
     <div class="container centralizar-conteudo">
-        <div>
-            <h1 class="display-1">Aulas de música - PIBBA</h1>
+        <div id="div-inicial">
+            <h1 class="display-1 display-md-2 display-lg1">Aulas de música - PIBBA</h1>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <button class="btn btn-primary btn-lg botao">Exercícios</button>
+            <button class="btn btn-primary btn-lg botao" id="btn-exercicios">Exercícios</button>
             <br><br>
             <button class="btn btn-secondary btn-lg botao">Aulas</button>
         </div>
+
+        <div id="div-exercicios" style="display: none; width: 100%;">
+            <div class="quiz-container p-4 border rounded shadow-sm">
+                <h2 class="text-center mb-4">Qual é a capital do Brasil?</h2>
+                <div class="d-grid gap-3">
+                  <button class="btn btn-outline-primary pt-2 pb-2">São Paulo</button>
+                  <button class="btn btn-outline-primary pt-2 pb-2">Rio de Janeiro</button>
+                  <button class="btn btn-outline-primary pt-2 pb-2">Brasília</button>
+                  <button class="btn btn-outline-primary pt-2 pb-2">Salvador</button>
+
+                  <button class="btn btn-primary ms-auto d-block col-5">Próximo</button>
+                </div>
+                <p>&nbsp;</p>
+
+              </div>
+        </div>
     </div>
 
-<script src="jquery-3.7.1.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="assets/js/script.js?v=1.0.0"></script>
 </body>
 </html>
