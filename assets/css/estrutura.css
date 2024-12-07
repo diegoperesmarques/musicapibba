@@ -40,9 +40,13 @@ footer {
     position: relative;
     width: 80%;
     margin: 0 auto;
-    overflow: auto;
-    height: 100%;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    height: 100%; 
+
 }
 
 /* Tamanho para celular */
@@ -56,8 +60,14 @@ footer {
     }
 
     #div-exercicios {
+        position: relative;
         width: 100%;
         margin: 0 auto;
-        overflow: auto;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        height: 100%; 
     }
 }
