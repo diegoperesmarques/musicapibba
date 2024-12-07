@@ -1,3 +1,15 @@
+function recarregar() {
+    localStorage.clear();
+
+    document.cookie.split(';').forEach(function(c) {
+        document.cookie = c.replace(/^ +/, '').replace(/(.+?)=(.+)$/, '$1=;expires=' + new Date(0).toUTCString() + ';path=/');
+    });
+
+    location.reload(true);
+}
+
+$(document).on("click", "#btn-atualizar", recarregar);
+
 $("#btn-exercicios").click(function() {
     $("#div-inicial").css({ display: "block", top: "0px", opacity: '1'})
     .animate({ top: "100px", opacity: '0', display: "none"}, 500, function() {
@@ -12,8 +24,7 @@ $("#btn-exercicios").click(function() {
 $(".btn-inicio").click(function() {
     $("#div-exercicios").css({ display: "block", top: "0px", opacity: '1'})
     .animate({ top: "100px", opacity: '0', display: "none"}, 500, function() {
-        location.reload();
-
+        recarregar();
     });
 });
 
