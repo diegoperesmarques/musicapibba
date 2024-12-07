@@ -1,76 +1,9 @@
-#div-inicial {
-    position: relative;
+.botao-inicial {
+    width: 40%;
 }
 
-.botao {
-    width: 90%;
-    height: 10vh;
-    font-size: 2rem;
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.quiz-container {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-
-
-@media (width: 375px) {
-    .botao {
-        width: 85%;
-        height: 8vh;
-        font-size: 3rem;
+@media (max-width: 450px) {
+    .botao-inicial {
+        width: 80%;
     }
-    h1 {
-        font-size: 1.8rem;
-    }
-}
-
-
-@media (min-width: 768px) {
-    .botao {
-        width: 70%;
-        font-size: 3rem;
-    }
-    h1 {
-        font-size: 3rem;
-    }
-
-    .quiz-container {
-        font-size: 3rem; /* Aumenta o texto em dispositivos móveis */
-    }
-
-    .quiz-container h2 {
-        font-size: 4rem; /* Aumenta o tamanho do título */
-    }
-
-    .quiz-container .btn {
-        font-size: 2.4rem; /* Aumenta o texto dos botões */
-        padding: 2rem; /* Ajusta o espaçamento interno dos botões */
-    }
-
-    .quiz-container .btn-primary {
-        font-size: 2.8rem; /* Destaque para o botão "Próximo" */
-    }
-}
-
-
-@media (min-width: 992px) {
-    .botao {
-        width: 60%;
-    }
-    h1 {
-        font-size: 4rem;
-    }
-
-    .quiz-container {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-    
 }

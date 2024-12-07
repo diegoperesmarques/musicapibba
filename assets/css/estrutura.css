@@ -1,11 +1,53 @@
-body, html {
-    height: 100%;
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 3% 94% 3%;
+    height: 100vh;
+    width: 100vw;
+    font-family: "sans-serif";
 }
 
-.centralizar-conteudo {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Tamanho padrão */
+header {
+    grid-row: 1/2;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+div {
+    grid-row: 2/3;
+    align-self: center;
+}
+
+footer {
+    grid-row: 3/4;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+#div-inicial {
+    position: relative;
     text-align: center;
+}
+
+#div-exercicios {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Tamanho para celular */
+@media (max-width: 450px) {
+    header {
+        font-size: 0.5em;
+    }
+
+    footer {
+        font-size: 0.5em;
+    }
+
+    #div-exercicios {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
