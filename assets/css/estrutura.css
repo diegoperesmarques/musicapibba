@@ -14,9 +14,15 @@ header {
     font-style: italic;
 }
 
-div {
+.centralizar-conteudo {
     grid-row: 2/3;
-    align-self: center;
+    align-self: stretch;
+    overflow: hidden;
+
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    height: 100%;
 }
 
 footer {
@@ -34,6 +40,9 @@ footer {
     position: relative;
     width: 80%;
     margin: 0 auto;
+    overflow: auto;
+    height: 100%;
+    overflow-y: auto;
 }
 
 /* Tamanho para celular */
@@ -49,5 +58,6 @@ footer {
     #div-exercicios {
         width: 100%;
         margin: 0 auto;
+        overflow: auto;
     }
 }
